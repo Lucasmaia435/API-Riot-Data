@@ -6,6 +6,12 @@
 ### First Install [Deno](https://deno.land/#installation)
 
 ### Run
+
+Create a .env file and place your Riot DEV API Key:
+
+```
+API_KEY=XXXXX-XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+```
 ```
 deno run --allow-net --allow-read src/index.ts
 ```
