@@ -56,6 +56,7 @@ export class Router {
   private checkRoute(registeredRoute: GetMethod, request: ServerRequest) {
 
     const url = request.url.split('/').filter(item => item !== "");
+    
     const route = registeredRoute.route.replaceAll('/', '').split(':').filter(item => item !== "");
 
     const params = new Map();

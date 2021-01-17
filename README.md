@@ -19,8 +19,11 @@ dm run #Runs the 'deno run' command based on the configs at config.json
 ## Routes
 >  All data that is used in this API is taken from [Riot developer API's](https://developer.riotgames.com/apis)
 
+* [Get summoner info by Summoner name](#route-nick)
+* [Get summoner info by Summoner name](#route-nick)
+* [Get summoner info by Summoner name](#route-nick)
 
-### `GET` `/:nick`
+<h3 id="route-nick"><code>/:nick</code></h3>
 
 Return the info's about a summoner in League of Legends :
 
@@ -68,4 +71,95 @@ Return the info's about a summoner in League of Legends :
   ]
 }
 
+```
+
+
+<h3 id="route-mastery-nick"><code>/mastery/:nick</code></h3>
+
+
+Return the info's about all the champions maesteries that a summoner have :
+
+`localhost:8080/mastery/lmrush`
+
+```json
+[
+  {
+    "championId": 245,
+    "championLevel": 7,
+    "championPoints": 260711,
+    "lastPlayTime": 1605793639000,
+    "championPointsSinceLastLevel": 239111,
+    "championPointsUntilNextLevel": 0,
+    "chestGranted": false,
+    "tokensEarned": 0,
+    "summonerId": "-m7xFnmqkhoW_jeeFOTiGdTOzqd6p5QHaLiSMHn24MkUJ40"
+  },
+  {
+    "championId": 236,
+    "championLevel": 7,
+    "championPoints": 138627,
+    "lastPlayTime": 1609962554000,
+    "championPointsSinceLastLevel": 117027,
+    "championPointsUntilNextLevel": 0,
+    "chestGranted": false,
+    "tokensEarned": 0,
+    "summonerId": "-m7xFnmqkhoW_jeeFOTiGdTOzqd6p5QHaLiSMHn24MkUJ40"
+  },
+  ...
+  {
+    "championId": 104,
+    "championLevel": 7,
+    "championPoints": 130162,
+    "lastPlayTime": 1609426357000,
+    "championPointsSinceLastLevel": 108562,
+    "championPointsUntilNextLevel": 0,
+    "chestGranted": false,
+    "tokensEarned": 0,
+    "summonerId": "-m7xFnmqkhoW_jeeFOTiGdTOzqd6p5QHaLiSMHn24MkUJ40"
+  }
+]
+```
+
+<h3 id="route-mastery-nick-qnt"><code>/mastery/:nick/:qnt</code></h3>
+
+Return the info's about `n` champions maesteries that a summoner have :
+
+`localhost:8080/mastery/lmrush/3`
+
+```json
+[
+  {
+    "championId": 245,
+    "championLevel": 7,
+    "championPoints": 260711,
+    "lastPlayTime": 1605793639000,
+    "championPointsSinceLastLevel": 239111,
+    "championPointsUntilNextLevel": 0,
+    "chestGranted": false,
+    "tokensEarned": 0,
+    "summonerId": "-m7xFnmqkhoW_jeeFOTiGdTOzqd6p5QHaLiSMHn24MkUJ40"
+  },
+  {
+    "championId": 236,
+    "championLevel": 7,
+    "championPoints": 138627,
+    "lastPlayTime": 1609962554000,
+    "championPointsSinceLastLevel": 117027,
+    "championPointsUntilNextLevel": 0,
+    "chestGranted": false,
+    "tokensEarned": 0,
+    "summonerId": "-m7xFnmqkhoW_jeeFOTiGdTOzqd6p5QHaLiSMHn24MkUJ40"
+  },
+  {
+    "championId": 104,
+    "championLevel": 7,
+    "championPoints": 130162,
+    "lastPlayTime": 1609426357000,
+    "championPointsSinceLastLevel": 108562,
+    "championPointsUntilNextLevel": 0,
+    "chestGranted": false,
+    "tokensEarned": 0,
+    "summonerId": "-m7xFnmqkhoW_jeeFOTiGdTOzqd6p5QHaLiSMHn24MkUJ40"
+  }
+]
 ```
