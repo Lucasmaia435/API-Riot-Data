@@ -20,8 +20,8 @@ dm run #Runs the 'deno run' command based on the configs at config.json
 >  All data that is used in this API is taken from [Riot developer API's](https://developer.riotgames.com/apis)
 
 * [Get summoner info by Summoner name](#route-nick)
-* [Get summoner info by Summoner name](#route-nick)
-* [Get summoner info by Summoner name](#route-nick)
+* [Get summoner's maesteries info by Summoner name](#route-mastery-nick)
+* [Get summoner's maesteries info by Summoner name and quantity of champions](#route-mastery-nick-qnt)
 
 <h3 id="route-nick"><code>/:nick</code></h3>
 
